@@ -1,0 +1,78 @@
+{% extends "homepage.html" %}
+{% load static %}
+{% block content %}
+    <div class="top py-12">
+        <header class="container mx-auto ">
+            <div class="flex items-center gap_custom">
+                <img class="logo" src="{% static '/images/logo.png'%}" alt="">
+                <div class="flex justify-between w-full">
+                    <div class="lg:flex hidden items-center text-white navbar xl:gap-20 gap-10 custom-bg">
+                        <a class="link" href="">Instsgram</a>
+                        <a class="link" href="">WhatsApp</a>
+                        <a class="link" href="">Telegramm</a>
+                    </div>
+                    <div
+                        class=" relative">
+                        <div id="lang-option" class="flex cursor-pointer custom-select items-center py-[18px] px-[26px] custom-bg gap-4">
+                            <img class="flag" id="selected-lang" src="{% static '/images/ru.png'%}" alt="">
+                            <img src="{% static '/images/arrow.svg'%}" class="arrow" alt="">
+                        </div>
+                        <div id="custom-option" class="absolute custom-option">
+                            <img id="ru" class="select cursor-pointer" src="{% static '/images/ru.png'%}" alt="">
+                            <img id="en" class="select cursor-pointer" src="{% static '/images/en.png'%}" alt="">
+                        </div>
+                    </div>
+                    <a
+                        class="px-[48px] py-[12px] text-white flex items-center gap-2 cursor-pointer bg-[#3466FE] rounded-2xl link">
+                        <span id="contacts">Contacts</span>
+                        <img src="{% static '/images/phone.svg'%}" class="w-[17px]" alt="">
+                    </a>
+                </div>
+            </div>
+        </header>
+        <section class="mt-[32px]">
+            <div class="container mx-auto">
+                <div class="flex xl:gap-[52px] gap-2">
+                    <div class="flex flex-col lg:w-1/2 text-white">
+                        <h1>Грибок ногтей? <br> Решение есть! <br> Лечение без боли ! </h1>
+                        <p class="second">Грибковая инфекция не пройдет сама – со временем она только разрастается,
+                            вызывая пожелтение,
+                            расслоение ногтей и неприятный запах. Если обычные кремы и лаки не помогают, пора довериться
+                            профессионалам!Не откладывайте лечение – грибок заразен! Чем раньше вы начнете, тем быстрее
+                            получите здоровые ногти.</p>
+                    </div>
+                    <div class="lg:flex hidden flex-col custom-bg w-1/2 py-[32px] px-[26px] itmes-center gap-4">
+                        <p class="text-center form_p">Leave your details to receive a free consultation</p>
+                        <form action="" class="flex flex-col gap-[14px]">
+                            <input name="full_name" type="text" class="form_input" placeholder="Name">
+                            <input name="phone_number" type="text" class="form_input" placeholder="Phone number">
+                            <textarea name="question" rows="3" id="" class="form_input" placeholder="Your question"></textarea>
+                            <button type='button' id='form_btn' class="send_button cursor-pointer">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="container mx-auto mt-4">
+            <div class="flex flex-col items-center gap-6">
+                <a href="https://web-market.kg" class="flex items-center wm_link text-white">
+                    <img src="{% static '/images/wm.png'%}" class="wm_logo" alt="">
+                    <p>Разработано компанией <span class="text-[#FFD02B]">Web Market</span></p>
+                </a>
+                <div id="footer_links" class='text-[12px] mx-auto mb-5 flex gap-2'>
+                    <span>Copyright © 2024 Marshall. All rights reserved.</span>
+                    <p>/</p>
+                    <span>Конфиденциальность</span>
+                    <p>/</p>
+                    <span>Условия использования</span>
+                    <p>/</p>
+                    <span>Настройки cookie</span>
+                    <p>/</p>
+                    <span>Запрет на продажу и передачу личной информации</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+{% endblock content %}
