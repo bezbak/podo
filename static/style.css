@@ -131,8 +131,12 @@ header {
     bottom: -120%;
     z-index: 10;
     height: 80px;
-
-
+}
+.transition-transform {
+    transition: transform 0.3s ease;
+}
+.transition-opacity {
+    transition: opacity 0.3s ease;
 }
 
 .custom-option img {
@@ -143,6 +147,7 @@ header {
 @media (max-width:1280px) {
     .top {
         background-size: 88% 110%;
+        background-image: url('./images/bg_tab.png');
     }
 
     .gap_custom {
@@ -155,6 +160,17 @@ header {
 
     .second {
         font-size: 20px;
+    }
+}
+@media (max-width:760px) {
+    .top {
+        background-size: 95% 95%;
+        background-image: url('./images/bg_mob.png');
+    }
+}
+@media (max-width:550px) {
+    .logo{
+        width: 120px;
     }
 }
 

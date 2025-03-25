@@ -1,36 +1,47 @@
 {% extends "homepage.html" %}
 {% load static %}
 {% block content %}
-    <div class="top py-12">
-        <header class="container mx-auto ">
-            <div class="flex items-center gap_custom">
+    <div class="top md:py-12 py-6">
+        <header class="container mx-auto max-md:px-10">
+            <div class="flex items-center justify-between w-full gap_custom">
                 <img class="logo" src="{% static '/images/logo.png'%}" alt="">
-                <div class="flex justify-between w-full">
-                    <div class="lg:flex hidden items-center text-white navbar xl:gap-20 gap-10 custom-bg">
-                        <a class="link" href="">Instsgram</a>
+                
+                <div class="relative">
+                    <div id="lang-option" class="flex cursor-pointer custom-select items-center p-4 md:py-[18px] md:px-[26px] custom-bg gap-4">
+                        <img class="flag" id="selected-lang" src="{% static '/images/ru.png'%}" alt="">
+                        <img src="{% static '/images/arrow.svg'%}" class="arrow" alt="">
+                    </div>
+                    <div id="custom-option" class="absolute custom-option">
+                        <img id="ru" class="select cursor-pointer" src="{% static '/images/ru.png'%}" alt="">
+                        <img id="en" class="select cursor-pointer" src="{% static '/images/en.png'%}" alt="">
+                    </div>
+                </div>
+                
+                <div class="lg:hidden block ">
+                    <button id="burger-btn" class="text-white focus:outline-none flex flex-col gap-1">
+                        <span class="block w-6 h-1 bg-black"></span>
+                        <span class="block w-6 h-1 bg-black"></span>
+                        <span class="block w-6 h-1 bg-black"></span>
+                    </button>
+                </div>
+                
+                <div id="burger-menu" class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden flex-col items-center justify-center text-white">
+                    <button id="close-btn" class="absolute top-5 right-5 text-white text-3xl w-[50px] h-[50px]">
+                        X
+                    </button>
+                    <nav class="flex flex-col items-center gap-6 py-10">
+                        <a class="link" href="">Instagram</a>
                         <a class="link" href="">WhatsApp</a>
-                        <a class="link" href="">Telegramm</a>
-                    </div>
-                    <div
-                        class=" relative">
-                        <div id="lang-option" class="flex cursor-pointer custom-select items-center py-[18px] px-[26px] custom-bg gap-4">
-                            <img class="flag" id="selected-lang" src="{% static '/images/ru.png'%}" alt="">
-                            <img src="{% static '/images/arrow.svg'%}" class="arrow" alt="">
-                        </div>
-                        <div id="custom-option" class="absolute custom-option">
-                            <img id="ru" class="select cursor-pointer" src="{% static '/images/ru.png'%}" alt="">
-                            <img id="en" class="select cursor-pointer" src="{% static '/images/en.png'%}" alt="">
-                        </div>
-                    </div>
-                    <a
-                        class="px-[48px] py-[12px] text-white flex items-center gap-2 cursor-pointer bg-[#3466FE] rounded-2xl link">
-                        <span id="contacts">Contacts</span>
-                        <img src="{% static '/images/phone.svg'%}" class="w-[17px]" alt="">
-                    </a>
+                        <a class="link" href="">Telegram</a>
+                        <a class="px-6 py-3 bg-[#3466FE] rounded-2xl link flex items-center gap-2" href="">
+                            <span id="contacts">Contacts</span>
+                            <img src="{% static '/images/phone.svg'%}" class="w-[17px]" alt="">
+                        </a>
+                    </nav>
                 </div>
             </div>
         </header>
-        <section class="mt-[32px]">
+        <section class="mt-[32px] max-md:px-10">
             <div class="container mx-auto">
                 <div class="flex xl:gap-[52px] gap-2">
                     <div class="flex flex-col lg:w-1/2 text-white">
@@ -61,7 +72,7 @@
                     <img src="{% static '/images/wm.png'%}" class="wm_logo" alt="">
                     <p>Разработано компанией <span class="text-[#FFD02B]">Web Market</span></p>
                 </a>
-                <div id="footer_links" class='text-[12px] mx-auto mb-5 flex gap-2'>
+                <div id="footer_links" class='text-[12px] mx-auto mb-5 flex gap-2 max-md:flex-wrap max-md:text-center max-md:justify-center'>
                     <span>Copyright © 2024 Marshall. All rights reserved.</span>
                     <p>/</p>
                     <span>Конфиденциальность</span>

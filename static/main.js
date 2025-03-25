@@ -55,4 +55,10 @@ $(document).ready(function () {
             setTimeout(() => alertBox.addClass('hidden'), 300); // Скрываем после анимации
         }, 3000);
     }
+    $('#burger-btn').on('click', function() {
+        $('#burger-menu').removeClass('hidden');
+    });
+    $('#close-btn').on('click', function() {
+        $('#burger-menu').addClass('hidden');
+    });
 });
