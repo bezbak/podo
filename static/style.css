@@ -172,6 +172,18 @@ header {
     .logo{
         width: 120px;
     }
+    .form_p{
+        font-size: 20px;
+        color: black;
+    }
+}
+@media (max-width:420px) {
+    .logo{
+        width: 80px;
+    }
+    .form_p{
+        font-size: 20px;
+    }
 }
 
 .container {
